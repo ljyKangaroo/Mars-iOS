@@ -9,19 +9,19 @@
 
 Pod::Spec.new do |s|
   s.name = "Mars-iOS"
-  s.version = "0.0.1"
+  s.version = "1.0.0"
   s.summary = "Cocoapods for tencent mars"
   s.description = <<-DESC
                       腾讯Mars pod版本,swift、oc皆可使用
                       DESC
 
-  s.homepage = "https://github.com/MrBugDou/Mars"
+  s.homepage = "hhttps://github.com/ljyKangaroo/Mars-iOS"
 
   s.license = { :type => "MIT", :file => "LICENSE" }
 
-  s.author = { "MrBugDou" => "bg1859710@gmail.com" }
+  s.author = { "ljyKangaroo" => "test.com" }
 
-  s.source = { :git => "https://github.com/MrBugDou/Mars.git", :tag => s.version.to_s }
+  s.source = { :git => "https://github.com/ljyKangaroo/Mars-iOS.git", :tag => s.version.to_s }
 
   s.requires_arc = true
 
@@ -43,7 +43,8 @@ Pod::Spec.new do |s|
 
   s.user_target_xcconfig = {
     "OTHER_LDFLAGS" => [
-      "-w",
+        "-ld_classic",
+        "-Wl",
     ],
   }
 
