@@ -86,7 +86,7 @@ using namespace mars::xlog;
     xlogger_SetLevel((TLogLevel)debugLevel);
     appender_set_console_log(true);
 #else
-    xlogger_SetLevel(TLogLevel)releaseLevel));
+    xlogger_SetLevel((TLogLevel)releaseLevel);
     appender_set_console_log(false);
 #endif
     

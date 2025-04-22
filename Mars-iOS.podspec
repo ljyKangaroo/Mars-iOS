@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name = "Mars-iOS"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.summary = "Cocoapods for tencent mars"
   s.description = <<-DESC
                       腾讯Mars pod版本,swift、oc皆可使用
