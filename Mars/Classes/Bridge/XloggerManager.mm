@@ -49,11 +49,12 @@ using namespace mars::xlog;
     setxattr([path cStringUsingEncoding:NSUTF8StringEncoding], attrName, &attrValue, sizeof(attrValue), 0, 0);
     
     // init xlog
+    
 #if DEBUG
     xlogger_SetLevel((TLogLevel)debugLevel);
     appender_set_console_log(true);
 #else
-    xlogger_SetLevel(TLogLevel)releaseLevel));
+    xlogger_SetLevel((TLogLevel)releaseLevel);
     appender_set_console_log(false);
 #endif
     //        save private key

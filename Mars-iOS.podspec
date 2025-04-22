@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name = "Mars-iOS"
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.summary = "Cocoapods for tencent mars"
   s.description = <<-DESC
                       腾讯Mars pod版本,swift、oc皆可使用
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.default_subspec = "Core"
 
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "13.0"
 
   s.ios.libraries = "z", "c++", "resolv.9"
 
