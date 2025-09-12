@@ -43,6 +43,10 @@ using namespace mars::xlog;
 // initialize Xlogger
 + (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix{
     
+    [self setupWith:debugLevel releaseLevel:releaseLevel path:path prefix:prefix mode:kAppenderAsync];
+}
++ (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix mode:(TAppenderMode)mode{
+    
     // set do not backup for logpath
     const char* attrName = "com.apple.MobileBackup";
     u_int8_t attrValue = 1;
@@ -64,7 +68,7 @@ using namespace mars::xlog;
     //        e8163215499a4c6d91b0691177127691e884ed409c49f2496102b626734f93f412de01d5df53772a7c7bd0c57f08062078b37d3f8b8ab995b9b3ec623b5bd2ff
     
     XLogConfig config;
-    config.mode_ = kAppenderAsync;
+    config.mode_ = mode;
     config.logdir_ = [path cStringUsingEncoding:NSUTF8StringEncoding];
     config.nameprefix_ = [prefix cStringUsingEncoding:NSUTF8StringEncoding];
     config.pub_key_ = "";

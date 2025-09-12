@@ -90,5 +90,6 @@ typedef NS_ENUM(NSInteger, XloggerCompressMode) {
 + (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel config:(XLogerConfig *)config;
 
 + (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix;
++ (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix mode:(TAppenderMode)mode;
 
 @end
