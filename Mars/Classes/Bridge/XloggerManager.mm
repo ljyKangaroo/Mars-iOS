@@ -43,7 +43,7 @@ using namespace mars::xlog;
 // initialize Xlogger
 + (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix{
     
-    [self setupWith:debugLevel releaseLevel:releaseLevel path:path prefix:prefix mode:YES];
+    [self setupWith:debugLevel releaseLevel:releaseLevel path:path prefix:prefix isAsync:YES];
 }
 + (void)setupWith:(XloggerType)debugLevel releaseLevel:(XloggerType)releaseLevel path:(NSString *)path prefix:(NSString *)prefix isAsync:(BOOL)isAsync {
     
