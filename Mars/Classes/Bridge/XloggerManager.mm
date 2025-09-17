@@ -74,7 +74,7 @@ using namespace mars::xlog;
     config.nameprefix_ = [prefix cStringUsingEncoding:NSUTF8StringEncoding];
     config.pub_key_ = "";
     config.compress_mode_ = kZlib;
-    config.compress_level_ = 0;
+    config.compress_level_ = 3;
     config.cachedir_ = "";
     config.cache_days_ = 0;
     appender_open(config);    
@@ -141,7 +141,20 @@ using namespace mars::xlog;
         default:
             break;
     }
-    
+
 }
 
+
++(void)updateImmediately:(BOOL) isAsync{
+    
+    if (isAsync == true) {
+        // 立即刷新，确保日志写入磁盘
+        appender_flush();
+    }
+    else {
+        // 立即刷新，确保日志写入磁盘
+        appender_flush_sync();
+    }
+
+}
 @end
